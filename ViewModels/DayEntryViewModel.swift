@@ -1,11 +1,3 @@
-//
-//  DayEntryViewModel.swift
-//  2Notebooks
-//
-//  Created by Vladimir Belousov on 03.03.2026.
-//
-
-
 import Foundation
 import SwiftData
 import SwiftUI
@@ -25,8 +17,6 @@ final class DayEntryViewModel {
         loadOrCreateToday()
     }
 
-    // MARK: - Load / Create
-
     func loadOrCreateToday() {
         let today = DayEntry.startOfDay()
         let descriptor = FetchDescriptor<DayEntry>(
@@ -44,8 +34,6 @@ final class DayEntryViewModel {
         declaration = entry?.declaration ?? ""
         confirmation = entry?.confirmation ?? ""
     }
-
-    // MARK: - Save
 
     func saveDeclaration() {
         entry?.declaration = declaration

@@ -2,7 +2,7 @@
 //  DayEntry.swift
 //  2Notebooks
 //
-//  Created by Vladimir Belousov on 03.03.2026.
+//  Created by Vladimir Belousov on 08.03.2026.
 //
 
 
@@ -23,7 +23,6 @@ final class DayEntry {
         self.confirmation = confirmation
     }
 
-    /// Strips time component so each calendar day maps to exactly one entry
     static func startOfDay(_ date: Date = .now) -> Date {
         Calendar.current.startOfDay(for: date)
     }
